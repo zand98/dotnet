@@ -24,3 +24,9 @@
 /home/msi/Desktop/all/project/dot.net/GameStore.Api/obj/Debug/net8.0/GameStore.Api.pdb
 /home/msi/Desktop/all/project/dot.net/GameStore.Api/obj/Debug/net8.0/GameStore.Api.genruntimeconfig.cache
 /home/msi/Desktop/all/project/dot.net/GameStore.Api/obj/Debug/net8.0/ref/GameStore.Api.dll
+/home/msi/Desktop/all/project/dot.net/GameStore.Api/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/home/msi/Desktop/all/project/dot.net/GameStore.Api/bin/Debug/net8.0/MinimalApis.Extensions.dll
+/home/msi/Desktop/all/project/dot.net/GameStore.Api/bin/Debug/net8.0/MiniValidation.dll
+/home/msi/Desktop/all/project/dot.net/GameStore.Api/obj/Debug/net8.0/GameStore.Api.csproj.AssemblyReference.cache
+/home/msi/Desktop/all/project/dot.net/GameStore.Api/obj/Debug/net8.0/GameStore.Api.MvcApplicationPartsAssemblyInfo.cs
+/home/msi/Desktop/all/project/dot.net/GameStore.Api/obj/Debug/net8.0/GameStor.5118A84D.Up2Date
