@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/msi/Desktop/all/project/dot.net/GameStore.Api/GameStore.Api.csproj": {}
+    "/home/zand/Desktop/all/project/dotnet-test/dotnet/GameStore.Api/GameStore.Api.csproj": {}
   },
   "projects": {
-    "/home/msi/Desktop/all/project/dot.net/GameStore.Api/GameStore.Api.csproj": {
+    "/home/zand/Desktop/all/project/dotnet-test/dotnet/GameStore.Api/GameStore.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/msi/Desktop/all/project/dot.net/GameStore.Api/GameStore.Api.csproj",
+        "projectUniqueName": "/home/zand/Desktop/all/project/dotnet-test/dotnet/GameStore.Api/GameStore.Api.csproj",
         "projectName": "GameStore.Api",
-        "projectPath": "/home/msi/Desktop/all/project/dot.net/GameStore.Api/GameStore.Api.csproj",
-        "packagesPath": "/home/msi/.nuget/packages/",
-        "outputPath": "/home/msi/Desktop/all/project/dot.net/GameStore.Api/obj/",
+        "projectPath": "/home/zand/Desktop/all/project/dotnet-test/dotnet/GameStore.Api/GameStore.Api.csproj",
+        "packagesPath": "/home/zand/.nuget/packages/",
+        "outputPath": "/home/zand/Desktop/all/project/dotnet-test/dotnet/GameStore.Api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/msi/.nuget/NuGet/NuGet.Config"
+          "/home/zand/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,17 +32,26 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
             "MinimalApis.Extensions": {
               "target": "Package",
               "version": "[0.11.0, )"
@@ -67,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.412/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.118/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

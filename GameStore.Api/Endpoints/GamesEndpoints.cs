@@ -1,3 +1,4 @@
+using GameStore.Api.Data;
 using GameStore.Api.Dtos;
 using Microsoft.VisualBasic;
 
@@ -28,19 +29,24 @@ public static class GamesEndpoints
 
         }).WithName(GetGameEndpointName);
 
-        group.MapPost("/", (CreateGameDto createGameDto) =>
+        group.MapPost("/", (CreateGameDto newGame, GameStoreContext dbContext) =>
         {
-            Console.WriteLine("createGameDto: " + createGameDto);
-            GameDto game = new(
-            games.Count + 1,
-            createGameDto.Name,
-            createGameDto.Genre,
-            createGameDto.Price,
-            createGameDto.ReleaseDate);
 
-            games.Add(game);
+            Game game = new()
+            {
+                Name = newGame.Name,
+                Genre = dbContext.Genres.Find(newGame.GenreId),
+                GenreId = newGame.GenreId,
+                Price = newGame.Price,
+                ReleaseDate = newGame.ReleaseDate
 
-            return Results.CreatedAtRoute(GetGameEndpointName, new { id = game.Id }, game);
+            };
+
+            dbContext.Games.Add(game);
+            dbContext.SaveChanges();
+
+            GameDto gameDto = new(game.Id, game.Name, game.Genre!.Name, game.Price, game.ReleaseDate);
+            return Results.CreatedAtRoute(GetGameEndpointName, new { id = game.Id }, gameDto);
         });
 
         group.MapPut("/{id}", (int id, UpdateGameDto updatedGame) =>
