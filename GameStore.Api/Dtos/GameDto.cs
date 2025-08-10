@@ -2,8 +2,8 @@ namespace GameStore.Api.Dtos;
 
 public record class GameDto(
     int Id,
-    string Name,
     decimal Price,
+    string Name,
     string Genre,
     DateOnly REleaseDate);
 
