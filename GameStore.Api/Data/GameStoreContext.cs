@@ -1,29 +1,23 @@
-using System.Reflection.Emit;
-using GameStore.Api.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace GameStore.Api.Data;
 
-
 public class GameStoreContext(DbContextOptions<GameStoreContext> options) : DbContext(options)
 {
-public DbSet<Game> Games => Set<Game>();
-public DbSet<Genre> Genres => Set<Genre>();
+    public DbSet<Game> Games => Set<Game>();
+    public DbSet<Genre> Genres => Set<Genre>();
 
-protected override void OnModelCreating(ModelBuilder modelBuilder)
-{
-    // base.OnModelCreating(modelBuilder);
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        // base.OnModelCreating(modelBuilder);
 
-    modelBuilder.Entity<Genre>().HasData(
-        
-        new { Id = 1, Name = "Fighting" },
-        new { Id = 2, Name = "Roleplaying" },
-        new { Id = 3, Name = "Sports" },
-        new { Id = 4, Name = "Racing" },
-        new { Id = 5, Name = "Kids and family" },
-        new { Id = 6, Name = "new Kids and family" }
+        modelBuilder.Entity<Genre>().HasData(
+            new { Id = 1, Name = "Fighting" },
+            new { Id = 2, Name = "Roleplaying" },
+            new { Id = 3, Name = "Sports" },
+            new { Id = 4, Name = "Racing" },
+            new { Id = 5, Name = "Kids and family" },
+            new { Id = 6, Name = "new Kids and family" }
         );
-
-
-}
+    }
 }

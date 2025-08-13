@@ -484,12 +484,8 @@ $RECYCLE.BIN/
 *.swp
 
 
-./GameStore.Api/obj
-./GameStore.Api/obj/*
-/GameStore.Api/obj
-/GameStore.Api/obj/*
-GameStore.Api/obj
-GameStore.Api/obj/*
+obj
+obj/*
 
 ./obj/*
 obj/*
